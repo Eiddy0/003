@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+
+	    <title>临安阳光商品有限公司</title>
+	    <!-- Web Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,400italic,700,700italic,900,900italic,500italic' rel='stylesheet' type='text/css'>
+       	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	    <!-- Flaticon CSS -->
+	    <link href="__INDEX__/fonts/flaticon/flaticon.css" rel="stylesheet">
+	    <!-- font-awesome CSS -->
+	    <link href="__INDEX__/css/font-awesome.min.css" rel="stylesheet">
+	    <!-- Offcanvas CSS -->
+	    <link href="__INDEX__/css/off-canvas.css" rel="stylesheet">
+	    <!-- animate CSS -->
+	    <link href="__INDEX__/css/animate.css" rel="stylesheet">
+	    <!-- language CSS -->
+	    <link href="__INDEX__/css/language-select.css" rel="stylesheet">
+	    <!-- owl.carousel CSS -->
+		<link rel="__INDEX__/stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+		<!-- magnific-popup -->
+    	<link href="__INDEX__/css/magnific-popup.css" rel="stylesheet">
+	    <!-- Bootstrap Core CSS -->
+	    <link href="__INDEX__/css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Template Core Styles -->
+	    <link href="__INDEX__/css/template.css" rel="stylesheet">
+	    <!-- Main Menu Styles -->
+	    <link href="__INDEX__/css/menu.css" rel="stylesheet">
+	    <!-- Custom CSS -->
+	    <link href="__INDEX__/css/blog.css" rel="stylesheet">
+	    <!-- Responsive CSS -->
+	    <link href="__INDEX__/css/responsive.css" rel="stylesheet">
+		<link href="__INDEX__/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="__INDEX__/css/style2.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="__INDEX__/css/mycss.css" rel="stylesheet">	
+	    <script src="__INDEX__/js/vendor/modernizr-2.8.1.min.js"></script>
+	    <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+		    <script src="js/vendor/html5shim.js"></script>
+		    <script src="js/vendor/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+
+
+	<body id="page-top" class="blog">
+		<div id="st-container" class="st-container">
+		    <div class="st-pusher">
+	        	<div class="st-content">
+					{include file="public/head" /}	
+					<!-- HEADER -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+				<li><a href="{:url('index/index')}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				{volist name="posarr" id="poscate"}
+				<li class="active"><a {if condition = "$poscate['pid'] eq 0"}href="{:url('artlist1/index',array('cateid'=>$poscate['id']))}"{elseif condition = "$poscate['pid'] neq 0"}href="{:url('artlist/index',array('cateid'=>$poscate['id']))}"{/if}>{$poscate.cate_name}</a></li>
+				{/volist}
+			</ol>
+		</div>
+	</div>
+					<!-- blog-section -->
+					
+<!-- single -->
+	<div class="single">
+		<div class="container">
+			<div class="col-md-4 products-left">
+				<div class="filter-price animated wow slideInUp" data-wow-delay=".5s">
+					
+				</div>
+				
+				
+			</div>
+			<div class="col-md-8 single-right">
+				
+				<div class="col-md-7 single-right-left simpleCart_shelfItem animated wow slideInRight" data-wow-delay=".5s">
+					<h3>{$articles.title}</h3>
+					<div class="description">
+						<p>{$articles.content}</p>
+					</div>
+						
+				</div>
+				<div class="clearfix"> </div>
+				
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //single -->
+<!-- single-related-products -->
+<!-- //single-related-products -->
+<!-- footer -->
+	{include file="public/foot" /}
+<!-- //footer -->
+			        <!-- copyright-section start -->
+			        
+			        <!-- copyright-section end -->
+	    		</div> <!-- .st-content -->
+		    </div> <!-- .st-pusher -->
+		    {include file="public/right" /}	
+	    	<!-- OFFCANVAS MENU -->
+	<!-- .offcanvas-menu -->
+		</div><!-- /st-container -->
+
+
+		<!-- Preloader -->
+		<div id="preloader">
+			<div id="status">
+				<div class="status-mes"></div>
+			</div>
+		</div>
+
+
+	    <!-- jQuery -->
+	    <script src="__INDEX__/js/jquery.js"></script>
+	    <!-- Bootstrap Core JavaScript -->
+	    <script src="__INDEX__/js/bootstrap.min.js"></script>
+		<!-- Scrolling Nav JavaScript -->
+	    <script src="__INDEX__/js/jquery.easing.min.js"></script>
+	    <!-- owl.carousel -->
+	    <script src="__INDEX__/owl.carousel/owl.carousel.min.js"></script>
+	    <!-- Magnific-popup -->
+		<script src="__INDEX__/js/jquery.magnific-popup.min.js"></script>
+		<!-- Offcanvas Menu -->
+		<script src="__INDEX__/js/hippo-offcanvas.js"></script>
+		<!-- stellar -->
+		<script src="__INDEX__/js/jquery.stellar.js"></script>
+		<!-- classie -->
+		<script src="__INDEX__/js/classie.js"></script>
+		<!-- selectFx -->
+		<script src="__INDEX__/js/selectFx.js"></script>
+		<!-- sticky kit -->
+		<script src="__INDEX__/js/jquery.sticky-kit.min.js"></script>
+		<!-- Flickr photo -->
+		<script src="__INDEX__/js/flickerPhoto.min.js"></script>
+		<!-- Twitter feed -->
+		<script src="__INDEX__/js/twitterFetcher_min.js"></script>
+	    <!-- Custom Script -->
+	    <script src="__INDEX__/js/scripts.js"></script>
+	    <!-- Flickr and Twitter calls -->
+	    <script>
+	    jQuery(function ($) {
+	    	'use strict';
+
+	    	// FLickr
+		    $('#photoStream').jflickrfeed({
+		        limit: 6,
+		        qstrings: {
+		            id: '52617155@N08'
+		        },
+		        itemTemplate: '<li>'+
+		                        '<a href="{{image}}" title="{{title}}">' +
+		                            '<img src="{{image_s}}" alt="{{title}}" />' +
+		                        '</a>' +
+		                      '</li>'
+		    });
+
+			
+
+		}); // JQuery end
+
+	    </script>
+
+	</body>
+</html>

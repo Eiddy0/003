@@ -1,0 +1,45 @@
+<div class="offcanvas-menu offcanvas-effect">
+	    		<div class="offcanvas-wrap">
+			        <div class="off-canvas-header">
+			        	<button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
+			        </div>
+			        <ul id ="offcanvasMenu" class="list-unstyled visible-xs visible-sm">
+			            <li><a href="{:url('index/index')}">Home</a></li>
+			            {volist name="cateres" id="cate"}
+			            <li>
+			            	<a {if condition = "$cate['type'] eq 1"}href="#" {elseif condition = "$cate['type'] eq 3" /}href="{:url('contact/index')}"{else /}href="#"{/if}>{$cate.cate_name}</a>
+			            	{if condition="$cate['children'] neq 0"}
+			            	<ul>
+			            		<?php foreach($cate['children'] as $k2 => $v2):?>
+			            		<li>
+			            			<a href="http://btl.utbeta.com/public/index.php/index/{if condition="$v2['type'] eq 1"}artlist{elseif condition="$v2['type'] eq 3" /}contact{else /}page{/if}/index/cateid/{$v2.id}"><?php echo $v2['cate_name'];?></a>
+			            		</li>
+			            		<?php endforeach;?>
+			            	</ul>
+			            	{/if}
+			            </li>
+			            {/volist}
+
+			        </ul>
+			        <div class="offcanvas-widgets hidden-sm hidden-xs">
+				        <div id="twitterWidget">
+							<h2>Tweeter feed</h2>				    	
+							<div class="twitter-widget"></div>
+						</div>
+						<div class="newsletter-widget">
+							<h2>Stay in Touch</h2>
+							<p>Enter your email address to receive news &amp; offers from us</p>
+
+							<form class="newsletter-form">
+								<div class="form-group">
+									<label class="sr-only" for="InputEmail1">Email address</label>
+									<input type="email" class="form-control" id="InputEmail2" placeholder="Your email address">
+									<button type="submit" class="btn">Send &nbsp;<i class="fa fa-angle-right"></i></button>
+								</div>
+							</form>		
+							       				
+						</div><!-- newsletter-widget -->
+					</div>
+
+				</div>
+	      	</div>
